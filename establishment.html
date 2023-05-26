@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:og="http://ogp.me/ns#"
+  xmlns:fb="http://www.facebook.com/2008/fbml"
+>
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Titulo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="WLIB Soluções Web - www.wlib.com.br" />
+
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:image:width" content="1300" />
+    <meta property="og:image:height" content="700" />
+    <meta property="og:site_name" content="TITULO" />
+    <meta property="fb:admins" content="1066108721" />
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/apps.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script defer type="text/javascript" src="js/jquery.slick.js"></script>
+    <script defer type="text/javascript" src="js/jquery.fancybox.js"></script>
+    <script defer type="text/javascript" src="js/jquery.inputmask.js"></script>
+    <script type="text/javascript" src="js/jquery.sweetalert.js"></script>
+    <script type="text/javascript" src="js/jquery.validacao.js"></script>
+    <script type="text/javascript" src="js/jquery.funcoes.js"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"
+    ></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header class="header-main back">
+        <a href=""
+          ><iconify-icon
+            class="baseline-chevron-left icon"
+            icon="ic:baseline-chevron-left"
+          ></iconify-icon
+        ></a>
+
+        <div class="header__select">
+          <span> Goiânia-GO </span>
+          <iconify-icon
+            class="iconify-chevron-down"
+            icon="ic:baseline-keyboard-arrow-down"
+          ></iconify-icon>
+        </div>
+        <div class="header__nav" id="btn-menu">
+          <iconify-icon
+            class="baseline-more-vert"
+            icon="ic:baseline-more-vert"
+          ></iconify-icon>
+        </div>
+      </header>
+
+      <section class="intro-establishment">
+        <div class="intro-establishment__img">
+          <img
+            src="./img/intro-img-restaurant.png"
+            alt="Imagem de apresentação do estabelecimento"
+          />
+          <div class="intro-establishment__overlay"></div>
+        </div>
+
+        <div class="intro-establishment__info">
+          <div class="info__logo">
+            <img
+              src="./img/logos-donna-maria.png"
+              alt="Logo da empresa Donna Maria"
+            />
+          </div>
+          <div class="info__main">
+            <h1>Caseratto Bar e Restaurante</h1>
+            <p class="info__details">
+              <span class="item__category">Confeitaria</span
+              ><span class="item__distance"
+                ><iconify-icon
+                  class="icon baseline-location-on"
+                  icon="ic:baseline-location-on"
+                ></iconify-icon
+                >1,2km</span
+              >
+            </p>
+          </div>
+          <div class="establishment-options">
+            <div class="container">
+              <ul class="establishment-options__list">
+                <li class="establishment-options__item">
+                  <a href="#"
+                    ><iconify-icon
+                      class="icon baseline-menu-book"
+                      icon="ic:baseline-menu-book"
+                    ></iconify-icon
+                    >Cardápio Digital</a
+                  >
+                </li>
+                <li class="establishment-options__item">
+                  <a href="#"
+                    ><iconify-icon
+                      class="icon outline-delivery-dining"
+                      icon="ic:outline-delivery-dining"
+                    ></iconify-icon
+                    >Cardápio Delivery</a
+                  >
+                </li>
+                <li class="establishment-options__item disabled">
+                  <a href="#"
+                    ><iconify-icon
+                      class="icon baseline-hourglass-top"
+                      icon="ic:baseline-hourglass-top"
+                    ></iconify-icon>
+                    <p>
+                      <span class="item__title">Lista de Espera</span>
+                      <span class="item__status">Indisponível</span>
+                    </p>
+                  </a>
+                </li>
+                <li class="establishment-options__item disabled">
+                  <a href="#"
+                    ><iconify-icon
+                      class="icon round-table-bar"
+                      icon="ic:round-table-bar"
+                    ></iconify-icon>
+                    <p>
+                      <span class="item__title">Pedir na mesa</span>
+                      <span class="item__status">Indisponível</span>
+                    </p>
+                  </a>
+                </li>
+                <li class="establishment-options__item">
+                  <a href="#"
+                    ><iconify-icon
+                      class="icon baseline-storefront"
+                      icon="ic:baseline-storefront"
+                    ></iconify-icon
+                    >Sobre</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script>
+      $(document).ready(function () {
+        $("#btn-menu, #close-main-modal").click(function (event) {
+          event.preventDefault(); // Impede o comportamento padrão do link
+          $("#menu-modal").toggleClass("active");
+        });
+      });
+    </script>
+  </body>
+</html>
