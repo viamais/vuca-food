@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:og="http://ogp.me/ns#"
+	xmlns:fb="http://www.facebook.com/2008/fbml"
+>
+	<head>
+		<meta charset="utf-8" />
+
+		<title>Titulo</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, maximum-scale=1"
+		/>
+		<meta name="description" content="" />
+		<meta name="author" content="WLIB Soluções Web - www.wlib.com.br" />
+
+		<meta property="og:title" content="" />
+		<meta property="og:description" content="" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="" />
+		<meta property="og:image" content="" />
+		<meta property="og:image:width" content="1300" />
+		<meta property="og:image:height" content="700" />
+		<meta property="og:site_name" content="TITULO" />
+		<meta property="fb:admins" content="1066108721" />
+
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/apps.css" />
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script defer type="text/javascript" src="js/jquery.slick.js"></script>
+		<script defer type="text/javascript" src="js/jquery.fancybox.js"></script>
+		<script defer type="text/javascript" src="js/jquery.inputmask.js"></script>
+		<script type="text/javascript" src="js/jquery.sweetalert.js"></script>
+		<script type="text/javascript" src="js/jquery.validacao.js"></script>
+		<script type="text/javascript" src="js/jquery.funcoes.js"></script>
+		<script
+			defer
+			src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"
+		></script>
+	</head>
+
+	<body>
+		<div class="wrapper profile">
+			<header class="header-main back only-title">
+				<a href=""
+					><iconify-icon
+						class="baseline-chevron-left left-icon icon"
+						icon="ic:baseline-chevron-left"
+					></iconify-icon
+				></a>
+
+				<div class="header__title">
+					<span> Meus pedidos </span>
+				</div>
+				<div class="header__nav" id="btn-menu">
+					<iconify-icon
+						class="icon right-icon baseline-more-vert"
+						icon="ic:baseline-more-vert"
+					></iconify-icon>
+				</div>
+			</header>
+
+			<section class="s-my-orders-view overflow-auto">
+				<div class="container">
+					<div class="orders__item margin-bottom-20">
+						<div class="orders__item__img">
+							<img src="img/logos-donna-maria.png" alt="logo do Restaurante" />
+						</div>
+						<div class="orders__item__details">
+							<h3>Buena Brasa</h3>
+							<p>13/09/2022 às 19:33</p>
+							<p>Pedido nº 13777</p>
+						</div>
+					</div>
+					<div class="orders-tag big">
+						<iconify-icon
+							class="icon baseline-check-circle-outline"
+							icon="ic:baseline-check-circle-outline"
+						></iconify-icon
+						><span>Pedido finalizado</span>
+					</div>
+
+					<ul class="orders-sumary__list">
+						<li class="orders-sumary__item">
+							<div class="sumary__item__img">
+								<img src="img/menu-item-img.png" alt="imagem do produto" />
+								<span class="quant-ornament">1</span>
+							</div>
+							<div class="sumary__item__details">
+								<h3 class="uppercase">FEIJOADA COMPLETA INDIVIDUAL</h3>
+								<p>– Pimenta</p>
+								<p>– Pimenta</p>
+								<p>– Pimenta</p>
+							</div>
+							<div class="sumary__item__price">
+								<p>R$ 56,90</p>
+							</div>
+						</li>
+						<li class="orders-sumary__item">
+							<div class="sumary__item__img">
+								<img src="img/menu-item-img.png" alt="imagem do produto" />
+								<span class="quant-ornament">1</span>
+							</div>
+							<div class="sumary__item__details">
+								<h3 class="uppercase">FEIJOADA COMPLETA INDIVIDUAL</h3>
+								<p>– Pimenta</p>
+								<p>– Pimenta</p>
+								<p>– Pimenta</p>
+								<p>– Pimenta</p>
+							</div>
+							<div class="sumary__item__price">
+								<p>R$ 56,90</p>
+							</div>
+						</li>
+					</ul>
+
+					<ul class="orders-details__list">
+						<li class="divider"></li>
+						<li class="order-details__item">
+							<ul class="order-details__rows">
+								<li class="order-details__row title">Valores</li>
+								<li class="order-details__row">
+									<span>Subtotal</span><span>R$ 100,90</span>
+								</li>
+								<li class="order-details__row">
+									<span>Subtotal</span><span>R$ 100,90</span>
+								</li>
+								<li class="order-details__row total">
+									<span>Total</span><span>R$ 100,90</span>
+								</li>
+							</ul>
+						</li>
+						<li class="divider"></li>
+						<li class="order-details__item">
+							<ul class="order-details__rows">
+								<li class="order-details__row title">Forma de pagamento</li>
+								<li class="order-details__row">
+									<span>Cardão de crédito final 0940</span>
+								</li>
+							</ul>
+						</li>
+						<li class="divider"></li>
+						<li class="order-details__item">
+							<ul class="order-details__rows">
+								<li class="order-details__row title">Endereço de entrega</li>
+								<li class="order-details__row">
+									<span>Rua T-51, 681, Setor Bueno</span>
+								</li>
+								<li class="order-details__row">
+									<span> Goiânia-GO</span>
+								</li>
+								<li class="order-details__row">
+									<span>Apto 1803, Ed. Supreme</span>
+								</li>
+							</ul>
+						</li>
+						<li class="divider"></li>
+						<li class="order-details__item">
+							<ul class="order-details__rows">
+								<li class="order-details__row title">
+									Contato do estabelecimento
+								</li>
+								<li class="order-details__row">
+									<span>Rua T-51, 681, Setor Bueno</span>
+								</li>
+								<li class="order-details__row">
+									<span> Goiânia-GO</span>
+								</li>
+							</ul>
+							<ul class="order-details__contact">
+								<li>
+									<a href="">
+										<iconify-icon
+											class="icon round-location-on"
+											icon="ic:round-location-on"
+										></iconify-icon
+									></a>
+								</li>
+								<li>
+									<a href=""
+										><iconify-icon
+											class="icon baseline-local-phone"
+											icon="ic:baseline-local-phone"
+										></iconify-icon
+									></a>
+								</li>
+								<li>
+									<a href=""
+										><iconify-icon
+											class="icon baseline-whatsapp"
+											icon="ic:baseline-whatsapp"
+										></iconify-icon
+									></a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</section>
+		</div>
+
+		<script></script>
+	</body>
+</html>

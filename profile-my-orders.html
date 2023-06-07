@@ -58,102 +58,72 @@
 				></a>
 
 				<div class="header__title">
-					<span> Meus dados </span>
+					<span> Meus pedidos </span>
 				</div>
 				<div class="header__nav" id="btn-menu">
 					<iconify-icon
-						class="right-icon baseline-more-vert"
+						class="right-icon icon baseline-more-vert"
 						icon="ic:baseline-more-vert"
 					></iconify-icon>
 				</div>
 			</header>
 
-			<section class="s-personal-data">
+			<section class="s-my-orders">
 				<div class="container">
-					<div class="s-personal-data__photo">
-						<div class="photo__container">
-							<iconify-icon
-								class="icon outline-add-a-photo"
-								icon="ic:outline-add-a-photo"
-							></iconify-icon>
-						</div>
-						<button class="photo__exclude" type="button">
-							<iconify-icon
-								class="icon baseline-delete"
-								icon="ic:baseline-delete"
-							></iconify-icon>
-						</button>
-					</div>
-
-					<form class="s-personal-data__form" action="">
-						<div class="input text personal-data">
-							<iconify-icon
-								class="icon baseline-persone"
-								icon="ic:baseline-person"
-							></iconify-icon>
-							<input
-								type="text"
-								name="full-name"
-								id="full-name"
-								placeholder="Seu nome completo"
-								value="Pedro Henrique Saddi"
-							/>
-						</div>
-						<div class="input text personal-data">
-							<iconify-icon
-								class="icon baseline-phone-android"
-								icon="ic:baseline-phone-android"
-							></iconify-icon>
-							<input
-								type="text"
-								name="phone"
-								id="phone"
-								placeholder="Seu melhor telefone"
-								value="(62) 984050927"
-							/>
-						</div>
-						<div class="input text personal-data">
-							<iconify-icon
-								class="icon baseline-email"
-								icon="ic:baseline-email"
-							></iconify-icon>
-							<input
-								type="email"
-								name="email"
-								id="email"
-								placeholder="Seu melhor e-mail"
-								value="pedrosaddi@gmail.com"
-							/>
-						</div>
-
-						<a href="#" class="btn btn-ghost w-icon-gray"
-							><iconify-icon
-								class="icon baseline-lock"
-								icon="ic:baseline-lock"
-							></iconify-icon
-							>Alterar senha de acesso</a
-						>
-						<a href="#" class="btn btn-ghost w-icon-red"
-							><iconify-icon
-								class="icon outline-cancel"
-								icon="ic:outline-cancel"
-							></iconify-icon
-							>Excluir minha conta</a
-						>
-
-						<a href="#" class="btn btn-primary">Salvar</a>
-					</form>
+					<ul class="orders__list">
+						<li class="orders__item">
+							<div class="orders__item__img">
+								<img
+									src="img/logos-donna-maria.png"
+									alt="logo do Restaurante"
+								/>
+							</div>
+							<div class="orders__item__details">
+								<h3>Buena Brasa</h3>
+								<p>13/09/2022 às 19:33</p>
+								<p>Pedido em andamento</p>
+							</div>
+							<a class="orders-tag keep-up" href="">Acompanhar</a>
+						</li>
+						<li class="orders__item">
+							<div class="orders__item__img">
+								<img
+									src="img/logos-donna-maria.png"
+									alt="logo do Restaurante"
+								/>
+							</div>
+							<div class="orders__item__details">
+								<h3>Buena Brasa</h3>
+								<p>13/09/2022 às 19:33</p>
+								<p>Pedido em andamento</p>
+							</div>
+							<a class="orders-tag rate" href="">Avaliar</a>
+						</li>
+						<li class="orders__item">
+							<div class="orders__item__img">
+								<img
+									src="img/logos-donna-maria.png"
+									alt="logo do Restaurante"
+								/>
+							</div>
+							<div class="orders__item__details">
+								<h3>Buena Brasa</h3>
+								<p>13/09/2022 às 19:33</p>
+								<p>Pedido em andamento</p>
+							</div>
+							<a class="orders-tag stars" href=""
+								><iconify-icon
+									class="icon round-star-rate"
+									icon="ic:round-star-rate"
+								></iconify-icon
+								>4,5</a
+							>
+						</li>
+					</ul>
 				</div>
 			</section>
 		</div>
 
-		<script>
-			$(document).ready(function () {
-				$('#btn-menu, #close-main-modal').click(function (event) {
-					event.preventDefault(); // Impede o comportamento padrão do link
-					$('#menu-modal').toggleClass('active');
-				});
-			});
-		</script>
+		<script></script>
 	</body>
 </html>

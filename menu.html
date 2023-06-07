@@ -64,9 +64,9 @@
 						icon="ic:baseline-keyboard-arrow-down"
 					></iconify-icon>
 				</div>
-				<div class="header__nav" id="btn-view-product">
+				<div class="header__nav">
 					<iconify-icon
-						class="baseline-more-vert"
+						class="icon baseline-more-vert"
 						icon="ic:baseline-more-vert"
 					></iconify-icon>
 				</div>
@@ -142,28 +142,28 @@
 					<div class="container">
 						<h1 class="title-section-h1">Promoção</h1>
 						<ul class="off__list">
-							<li class="list__item">
+							<li class="list__item" id="btn-view-product">
 								<img src="img/menu-item-img.png" alt="Imagem do prato" />
 								<div class="item__description">
 									<p class="item__title">FEIJOADA COMPLETA INDIVIDUAL</p>
 									<p class="item__price">R$ 42,90</p>
 								</div>
 							</li>
-							<li class="list__item">
+							<li class="list__item" id="btn-view-product">
 								<img src="img/menu-item-img.png" alt="Imagem do prato" />
 								<div class="item__description">
 									<p class="item__title">FEIJOADA COMPLETA INDIVIDUAL</p>
 									<p class="item__price">R$ 42,90</p>
 								</div>
 							</li>
-							<li class="list__item">
+							<li class="list__item" id="btn-view-product">
 								<img src="img/menu-item-img.png" alt="Imagem do prato" />
 								<div class="item__description">
 									<p class="item__title">FEIJOADA COMPLETA INDIVIDUAL</p>
 									<p class="item__price">R$ 42,90</p>
 								</div>
 							</li>
-							<li class="list__item">
+							<li class="list__item" id="btn-view-product">
 								<img src="img/menu-item-img.png" alt="Imagem do prato" />
 								<div class="item__description">
 									<p class="item__title">FEIJOADA COMPLETA INDIVIDUAL</p>
@@ -179,7 +179,7 @@
 						<div class="divider"></div>
 						<h1 class="title-section-h1">Feijoada</h1>
 						<ul class="dishes__list">
-							<li class="list__item">
+							<li class="list__item" id="btn-view-product">
 								<a href="">
 									<div class="item__description">
 										<p class="item__title">FEIJOADA COMPLETA INDIVIDUAL</p>
@@ -192,7 +192,7 @@
 									<img src="img/menu-item-img.png" alt="Imagem do prato" />
 								</a>
 							</li>
-							<li class="list__item">
+							<li class="list__item" id="btn-view-product">
 								<a href="">
 									<div class="item__description">
 										<p class="item__title">FEIJOADA COMPLETA INDIVIDUAL</p>
@@ -205,7 +205,7 @@
 									<img src="img/menu-item-img.png" alt="Imagem do prato" />
 								</a>
 							</li>
-							<li class="list__item">
+							<li class="list__item" id="btn-view-product">
 								<a href="">
 									<div class="item__description">
 										<p class="item__title">FEIJOADA COMPLETA INDIVIDUAL</p>
@@ -218,7 +218,7 @@
 									<img src="img/menu-item-img.png" alt="Imagem do prato" />
 								</a>
 							</li>
-							<li class="list__item">
+							<li class="list__item" id="btn-view-product">
 								<a href="">
 									<div class="item__description">
 										<p class="item__title">FEIJOADA COMPLETA INDIVIDUAL</p>
@@ -231,7 +231,7 @@
 									<img src="img/menu-item-img.png" alt="Imagem do prato" />
 								</a>
 							</li>
-							<li class="list__item">
+							<li class="list__item" id="btn-view-product">
 								<a href="">
 									<div class="item__description">
 										<p class="item__title">FEIJOADA COMPLETA INDIVIDUAL</p>
@@ -269,7 +269,7 @@
 							<a href="#">
 								<iconify-icon
 									class="icon"
-									icon="ic:baseline-home"
+									icon="ic:baseline-menu-book"
 								></iconify-icon>
 								<span>Cardápio Digital</span>
 							</a>
@@ -278,7 +278,7 @@
 							<a href="#">
 								<iconify-icon
 									class="icon"
-									icon="ic:baseline-home"
+									icon="ic:outline-delivery-dining"
 								></iconify-icon>
 								<span>Cardápio Delivery</span>
 							</a>
@@ -287,7 +287,7 @@
 							<a href="#">
 								<iconify-icon
 									class="icon"
-									icon="ic:baseline-home"
+									icon="ic:baseline-hourglass-top"
 								></iconify-icon>
 								<span>Fila de Espera</span>
 							</a>
@@ -296,7 +296,7 @@
 							<a href="#">
 								<iconify-icon
 									class="icon"
-									icon="ic:baseline-home"
+									icon="ic:round-table-bar"
 								></iconify-icon>
 								<span>Pedir na mesa</span>
 							</a>
@@ -305,7 +305,7 @@
 							<a href="#">
 								<iconify-icon
 									class="icon"
-									icon="ic:baseline-home"
+									icon="ic:baseline-storefront"
 								></iconify-icon>
 								<span>Sobre</span>
 							</a>
@@ -410,7 +410,7 @@
 											class="input-number__display numberDisplay"
 											id="numberDisplay"
 											type="text"
-											value="0"
+											value="1"
 											readonly
 										/>
 										<button
@@ -488,12 +488,55 @@
 						</div>
 					</div>
 				</div>
+				<nav class="main-nav product-view-cart active">
+					<div class="container">
+						<div class="cart active">
+							<div class="input-group-number">
+								<div class="input-number big" id="inputNumberWrapper">
+									<button
+										class="input-number__decrement decrement"
+										type="button"
+									>
+										<iconify-icon
+											class="icon decrement-icon"
+											icon="ic:round-remove"
+										></iconify-icon>
+									</button>
+									<input
+										class="input-number__display numberDisplay"
+										id="numberDisplay"
+										type="text"
+										value="1"
+										readonly
+									/>
+									<button
+										class="input-number__increment increment"
+										type="button"
+									>
+										<iconify-icon
+											class="icon increment-icon"
+											icon="ic:round-add"
+										></iconify-icon>
+									</button>
+								</div>
+							</div>
+							<button class="product-view-cart-add">
+								<div class="cart__icon">
+									<p class="cart__title">Adicionar</p>
+								</div>
+								<div class="cart__text">
+									<p class="cart__price">R$ 49,90</p>
+								</div>
+							</button>
+						</div>
+					</div>
+				</nav>
 			</section>
 		</div>
 		<script>
 			$(document).ready(function () {
 				$('#btn-view-product, #close-view-product').click(function (event) {
-					event.preventDefault(); // Impede o comportamento padrão do link
+					event.preventDefault();
 					$('#view-product').toggleClass('active');
 				});
 			});

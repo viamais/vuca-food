@@ -174,6 +174,15 @@ body {
 /* Início dos estilos de classes utilitárias
  */
 
+.margin-bottom-20 {
+	margin-bottom: 2rem;
+}
+.divider {
+	height: 1px;
+	width: 100%;
+	background-color: #333333;
+}
+
 .bg-black {
 	background-color: var(--gray5);
 }
@@ -191,6 +200,9 @@ body {
 .none {
 	display: none;
 }
+
+/* Fim dos estilos de classes utilitárias
+ */
 
 /* Início dos estilos globais de tipografia
  */
@@ -247,6 +259,64 @@ body {
 }
 
 /*Fim dos estilos globais de botões*/
+
+/* Início dos estilos de tags */
+
+/* Fim dos estilos de tags */
+
+.orders-tag {
+	border-radius: 6px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 2.6rem;
+	width: max-content;
+	padding: 0 0.8rem;
+}
+
+.orders-tag.keep-up {
+	background: var(--color-primary);
+	color: #fff;
+	font-size: 14px;
+	font-weight: 700;
+}
+
+.orders-tag.rate {
+	background: var(--gray0);
+	color: #fff;
+	font-size: 14px;
+	font-weight: 700;
+}
+
+.orders-tag.stars {
+	background: transparent;
+	color: var(--gray0);
+	font-size: 1.8rem;
+	font-weight: 400;
+}
+
+.orders-tag.stars .icon {
+	font-size: 2.4rem;
+}
+
+.orders-tag.big {
+	height: auto;
+	border-radius: 6px;
+	background-color: var(--gray4);
+	width: 100%;
+	padding: 1.2rem 1.6rem;
+	gap: 0.8rem;
+}
+
+.orders-tag.big .icon {
+	font-size: 2.4rem;
+}
+
+.orders-tag.big span {
+	font-size: 1.9rem;
+	font-weight: 700;
+}
 
 /* Início dos estilos de inputs */
 
@@ -324,6 +394,19 @@ body {
 	width: 12.4rem;
 	height: 4.8rem;
 	border-radius: 10px;
+}
+
+.input-number.big {
+	display: flex;
+	justify-content: center;
+	gap: 0.8rem;
+	align-items: center;
+	background-color: transparent;
+	color: #fff;
+	width: 12.4rem;
+	height: 4.8rem;
+	border-radius: 10px;
+	border: 1px solid var(--gray3);
 }
 
 .input-group-number {
@@ -499,6 +582,51 @@ header {
 	color: var(--gray3);
 }
 
+.main-nav.product-view-cart {
+	display: none;
+}
+.main-nav.product-view-cart.active {
+	display: flex;
+	height: auto;
+	box-shadow: none;
+	border-top: 1px solid var(--gray3);
+}
+
+.main-nav.product-view-cart .container {
+	margin: 0 !important;
+	padding: 1.6rem 1rem 3.4rem 1rem;
+}
+
+.main-nav.product-view-cart .container .cart.active {
+	background: none;
+	margin-top: 0;
+	display: flex;
+	width: 100%;
+
+	justify-content: space-between;
+	gap: 1.6rem;
+}
+
+.main-nav.product-view-cart .container .cart.active .input-group-number {
+	border: none;
+	padding: 0;
+}
+
+.main-nav.product-view-cart .container .cart.active .product-view-cart-add {
+	display: flex;
+	width: 100%;
+	background: var(--color-primary);
+	border-radius: 0.6rem;
+	align-items: center;
+	justify-content: space-between;
+	height: 4.6rem;
+	padding: 1.2rem 1.3rem;
+	color: #fff;
+}
+
+.main-nav.product-view-cart .container {
+}
+
 /* Fim dos estilos da barra horizontal de navegação */
 
 /* Início dos estilos do header principal */
@@ -585,6 +713,7 @@ header {
 
 .header-search {
 	gap: 2rem;
+	padding: 1rem 0;
 }
 
 .header-search .icon.baseline-chevron-left {
@@ -812,7 +941,7 @@ header {
 }
 
 #menu-modal.active {
-	width: 100vw;
+	width: 100%;
 	opacity: 100;
 }
 
@@ -1327,6 +1456,7 @@ header {
 
 .menu-dishes {
 	margin-top: 2.4rem;
+	background-color: var(--gray4);
 }
 
 .menu-dishes .container .divider {
@@ -1579,4 +1709,179 @@ header {
 
 .s-password .btn-primary {
 	margin-top: 1.6rem;
+}
+
+/* Fim dos estilos da página de alteração de senha*/
+
+/* Início dos estilos da página de lista de pedidos*/
+
+.s-my-orders .container .orders__list {
+	display: flex;
+	flex-direction: column;
+}
+
+.orders__item {
+	display: flex;
+	gap: 1.6rem;
+	padding: 1.6rem;
+	border-radius: 0.6rem;
+	align-items: center;
+	gap: 1.2rem;
+	width: 100%;
+	height: 9rem;
+}
+
+.orders__item .orders__item__img {
+	flex-shrink: 0;
+	height: 7rem;
+	width: 7rem;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--gray4);
+}
+
+.orders__item .orders__item__img img {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
+
+.orders__item .orders__item__details {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.orders__item .orders__item__details h3 {
+	font-size: 1.8rem;
+	font-weight: 700;
+}
+
+.orders__item .orders__item__details p {
+	color: var(--gray2);
+	font-size: 1.3rem;
+	font-weight: 400;
+}
+
+.orders-sumary__item {
+	display: flex;
+	gap: 1.6rem;
+
+	width: 100%;
+}
+
+.orders-sumary__item .sumary__item__img {
+	position: relative;
+	max-width: 7rem;
+	margin-top: 0.4rem;
+	flex-shrink: 0;
+	border-radius: 5px;
+}
+
+.orders-sumary__item .sumary__item__img .quant-ornament {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	border-radius: 50%;
+	top: -0.6rem;
+	right: -0.6rem;
+	width: 2rem;
+	height: 2rem;
+	background-color: #fff;
+	opacity: 1;
+	color: #000;
+	font-size: 1.3rem;
+	font-weight: 700;
+}
+
+.orders-sumary__item .sumary__item__img img {
+	object-fit: cover;
+}
+
+.orders-sumary__item .sumary__item__details {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.orders-sumary__item .sumary__item__details h3 {
+	font-size: 1.3rem;
+	font-weight: 700;
+	line-height: 1.4rem;
+}
+
+.orders-sumary__item .sumary__item__details p {
+	color: var(--gray2);
+	font-size: 1.3rem;
+	font-weight: 400;
+}
+
+.orders-sumary__item .sumary__item__price p {
+	color: #fff;
+	font-size: 1.3rem;
+	font-weight: 700;
+	white-space: nowrap;
+}
+
+.order-details__item {
+	display: flex;
+
+	gap: 0.4rem;
+	width: 100%;
+}
+
+.order-details__item .order-details__rows {
+	display: flex;
+	flex-direction: column;
+	gap: 0.6rem;
+	width: 100%;
+}
+
+.order-details__item .order-details__contact {
+	display: flex;
+	gap: 1.2rem;
+	font-size: 3.2rem;
+}
+
+.order-details__item .order-details__rows .order-details__row {
+	color: var(--gray2);
+	font-size: 1.3rem;
+	font-weight: 400;
+	font-style: normal;
+	line-height: 1.4rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.order-details__item .order-details__rows .order-details__row.title {
+	color: #fff;
+	font-size: 1.6rem;
+	font-weight: 700;
+}
+
+.order-details__item .order-details__rows .order-details__row.total {
+	font-size: 1.3rem;
+	font-weight: 700;
+	line-height: 1.4rem;
+}
+
+.s-my-orders-view {
+	padding-bottom: 3.2rem;
+}
+
+.s-my-orders-view .container .orders-sumary__list {
+	display: flex;
+	flex-direction: column;
+	gap: 2.4rem;
+	margin: 3.2rem 0;
+}
+
+.s-my-orders-view .container .orders-details__list {
+	display: flex;
+	flex-direction: column;
+	gap: 1.2rem;
 }
