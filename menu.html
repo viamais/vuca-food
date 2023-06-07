@@ -64,7 +64,7 @@
 						icon="ic:baseline-keyboard-arrow-down"
 					></iconify-icon>
 				</div>
-				<div class="header__nav" id="btn-menu">
+				<div class="header__nav" id="btn-view-product">
 					<iconify-icon
 						class="baseline-more-vert"
 						icon="ic:baseline-more-vert"
@@ -313,6 +313,247 @@
 					</ul>
 				</div>
 			</nav>
+
+			<section id="view-product" class="hidden">
+				<button type="button" id="close-view-product">
+					<iconify-icon
+						class="icon round-close"
+						icon="ic:round-close"
+					></iconify-icon>
+				</button>
+
+				<div class="view-product__header">
+					<img src="/img/img-header-view.png" alt="" id="header-img" />
+					<div class="view-product__description">
+						<div class="container">
+							<h2>HAMBURGUER BOVINO</h2>
+							<p>
+								Pão brioche amanteigado, queijo cheddar, hambúrguer 200g (blend
+								de fraldinha e maminha), maionese verde, maionese de bacon e
+								fritas.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="view-product__options">
+					<div class="container">
+						<div class="options__group">
+							<div class="options__header">
+								<div class="header__text">
+									<p class="text__title">Ponto de carne</p>
+									<p class="text__description">Escolha 1 opção</p>
+								</div>
+								<p class="header__warning">Obrigatório</p>
+							</div>
+
+							<form class="options__list">
+								<label class="input-group-radio" for="malPassado">
+									Mal passado
+									<input
+										class="radio-button"
+										type="radio"
+										id="malPassado"
+										name="carne"
+										value="malPassado"
+									/>
+									<span class="custom-radio"></span>
+								</label>
+								<label class="input-group-radio" for="aoPontoMenos">
+									Ao ponto menos
+									<input
+										class="radio-button"
+										type="radio"
+										id="aoPontoMenos"
+										name="carne"
+										value="aoPontoMenos"
+									/>
+									<span class="custom-radio"></span>
+								</label>
+								<label class="input-group-radio" for="aoPonto">
+									Ao ponto
+									<input
+										class="radio-button"
+										type="radio"
+										id="aoPonto"
+										name="carne"
+										value="aoPonto"
+									/>
+									<span class="custom-radio"></span>
+								</label>
+							</form>
+						</div>
+
+						<div class="options__group">
+							<div class="options__header optional">
+								<div class="header__text">
+									<p class="text__title">Adicionais</p>
+									<p class="text__description">Escolha 1 opção</p>
+								</div>
+								<p class="header__warning">Obrigatório</p>
+							</div>
+
+							<form class="options__list">
+								<div class="input-group-number">
+									<label for="inputNumberWrapper">Quantidade</label>
+									<div class="input-number" id="inputNumberWrapper">
+										<button
+											class="input-number__decrement decrement"
+											type="button"
+										>
+											<iconify-icon
+												class="icon decrement-icon"
+												icon="ic:round-remove"
+											></iconify-icon>
+										</button>
+										<input
+											class="input-number__display numberDisplay"
+											id="numberDisplay"
+											type="text"
+											value="0"
+											readonly
+										/>
+										<button
+											class="input-number__increment increment"
+											type="button"
+										>
+											<iconify-icon
+												class="icon increment-icon"
+												icon="ic:round-add"
+											></iconify-icon>
+										</button>
+									</div>
+								</div>
+								<div class="input-group-number">
+									<label for="inputNumberWrapper">Quantidade</label>
+									<div class="input-number" id="inputNumberWrapper">
+										<button
+											class="input-number__decrement decrement"
+											type="button"
+										>
+											<iconify-icon
+												class="icon decrement-icon"
+												icon="ic:round-remove"
+											></iconify-icon>
+										</button>
+										<input
+											class="input-number__display numberDisplay"
+											id="numberDisplay"
+											type="text"
+											value="0"
+											readonly
+										/>
+										<button
+											class="input-number__increment increment"
+											type="button"
+										>
+											<iconify-icon
+												class="icon increment-icon"
+												icon="ic:round-add"
+											></iconify-icon>
+										</button>
+									</div>
+								</div>
+								<div class="input-group-number">
+									<label for="inputNumberWrapper">Quantidade</label>
+									<div class="input-number" id="inputNumberWrapper">
+										<button
+											class="input-number__decrement decrement"
+											type="button"
+										>
+											<iconify-icon
+												class="icon decrement-icon"
+												icon="ic:round-remove"
+											></iconify-icon>
+										</button>
+										<input
+											class="input-number__display numberDisplay"
+											id="numberDisplay"
+											type="text"
+											value="0"
+											readonly
+										/>
+										<button
+											class="input-number__increment increment"
+											type="button"
+										>
+											<iconify-icon
+												class="icon increment-icon"
+												icon="ic:round-add"
+											></iconify-icon>
+										</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
 		</div>
+		<script>
+			$(document).ready(function () {
+				$('#btn-view-product, #close-view-product').click(function (event) {
+					event.preventDefault(); // Impede o comportamento padrão do link
+					$('#view-product').toggleClass('active');
+				});
+			});
+			/* $(document).ready(function () {
+				var headerImg = $('#header-img'); // Seleciona a imagem pelo id
+				var imgHeight = headerImg.height();
+				var optionsContainer = $('.view-product__options'); // Seleciona o container de opções
+
+				optionsContainer.scroll(function () {
+					var scrollPos = $(this).scrollTop();
+					var newHeight = imgHeight - scrollPos;
+
+					if (newHeight >= 80) {
+						// Garante que a imagem nunca seja menor que 80px
+						headerImg.height(newHeight);
+					} else {
+						headerImg.height(80);
+					}
+				});
+			}); */
+			$(document).ready(function () {
+				$('.increment').on('click', function (e) {
+					e.preventDefault();
+					var $numberDisplay = $(this).siblings('.numberDisplay'); // Acessar o input relativo ao botão clicado
+					var value = parseInt($numberDisplay.val(), 10);
+					value++;
+					if (value > 9) {
+						value = 9;
+					}
+					$numberDisplay.val(value);
+					if (value > 0) {
+						$(this).siblings('.decrement').removeClass('none');
+						$numberDisplay.removeClass('none');
+					}
+				});
+
+				$('.decrement').on('click', function (e) {
+					e.preventDefault();
+					var $numberDisplay = $(this).siblings('.numberDisplay'); // Acessar o input relativo ao botão clicado
+					var value = parseInt($numberDisplay.val(), 10);
+					value--;
+					if (value < 0) {
+						value = 0;
+					}
+					$numberDisplay.val(value);
+					if (value === 0) {
+						$(this).addClass('none');
+						$numberDisplay.addClass('none');
+					}
+				});
+
+				// Verificar valor inicial de cada input
+				$('.numberDisplay').each(function () {
+					var value = parseInt($(this).val(), 10);
+					if (value === 0) {
+						$(this).addClass('none');
+						$(this).siblings('.decrement').addClass('none');
+					}
+				});
+			});
+		</script>
 	</body>
 </html>
