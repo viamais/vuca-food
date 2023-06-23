@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:og="http://ogp.me/ns#"
+	xmlns:fb="http://www.facebook.com/2008/fbml"
+>
+	<head>
+		<meta charset="utf-8" />
+
+		<title>Titulo</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, maximum-scale=1"
+		/>
+		<meta name="description" content="" />
+		<meta name="author" content="WLIB Soluções Web - www.wlib.com.br" />
+
+		<meta property="og:title" content="" />
+		<meta property="og:description" content="" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="" />
+		<meta property="og:image" content="" />
+		<meta property="og:image:width" content="1300" />
+		<meta property="og:image:height" content="700" />
+		<meta property="og:site_name" content="TITULO" />
+		<meta property="fb:admins" content="1066108721" />
+
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/apps.css" />
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script defer type="text/javascript" src="js/jquery.slick.js"></script>
+		<script defer type="text/javascript" src="js/jquery.fancybox.js"></script>
+		<script defer type="text/javascript" src="js/jquery.inputmask.js"></script>
+		<script type="text/javascript" src="js/jquery.sweetalert.js"></script>
+		<script type="text/javascript" src="js/jquery.validacao.js"></script>
+		<script type="text/javascript" src="js/jquery.funcoes.js"></script>
+		<script
+			defer
+			src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"
+		></script>
+	</head>
+
+	<body>
+		<div class="wrapper bg-black">
+			<header class="header-main back only-title bg-black">
+				<a href=""
+					><iconify-icon
+						class="baseline-chevron-left left-icon icon"
+						icon="ic:baseline-chevron-left"
+					></iconify-icon
+				></a>
+
+				<div class="header__title">
+					<span> Avaliar pedido </span>
+				</div>
+				<div class="header__nav" id="btn-menu">
+					<iconify-icon
+						class="right-icon baseline-more-vert"
+						icon="ic:baseline-more-vert"
+					></iconify-icon>
+				</div>
+			</header>
+
+			<section class="s-review overflow-auto">
+				<div class="s-review__order">
+					<div class="container">
+						<p>Por favor, avalie o pedido em:</p>
+						<h2>Caseratto Bar e Restaurante</h2>
+
+						<p>12/08/2022 às 19:33</p>
+					</div>
+				</div>
+				<div class="s-review__ask">
+					<div class="container">
+						<div class="ask__illustration">
+							<img src="img/illus-s-review.svg" alt="Ilustração de pergunta" />
+							<p class="ask__title">Recepção</p>
+						</div>
+						<ul class="ask__stars">
+							<li>
+								<button type="button" class="rate-star">
+									<iconify-icon
+										class="icon round-star-rate"
+										icon="ic:round-star-rate"
+									></iconify-icon>
+								</button>
+							</li>
+							<li>
+								<button type="button" class="rate-star">
+									<iconify-icon
+										class="icon round-star-rate"
+										icon="ic:round-star-rate"
+									></iconify-icon>
+								</button>
+							</li>
+							<li>
+								<button type="button" class="rate-star">
+									<iconify-icon
+										class="icon round-star-rate"
+										icon="ic:round-star-rate"
+									></iconify-icon>
+								</button>
+							</li>
+							<li>
+								<button type="button" class="rate-star">
+									<iconify-icon
+										class="icon round-star-rate"
+										icon="ic:round-star-rate"
+									></iconify-icon>
+								</button>
+							</li>
+							<li>
+								<button type="button" class="rate-star">
+									<iconify-icon
+										class="icon round-star-rate"
+										icon="ic:round-star-rate"
+									></iconify-icon>
+								</button>
+							</li>
+						</ul>
+						<ul class="ask__more-info none">
+							<li>
+								<button type="button" class="rate-tag">
+									Demora no atendimento
+								</button>
+							</li>
+							<li>
+								<button type="button" class="rate-tag">Sei lá</button>
+							</li>
+
+							<li>
+								<button type="button" class="rate-tag">Testando</button>
+							</li>
+
+							<li>
+								<button type="button" class="rate-tag">
+									Demora no atendimento
+								</button>
+							</li>
+
+							<li>
+								<button type="button" class="rate-tag">
+									Demora no atendimento
+								</button>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<div class="container container-btn">
+				<a href="#" class="btn btn-primary">Continuar</a>
+			</div>
+		</div>
+
+		<script>
+			$(document).ready(function () {
+				$('.rate-star').click(function () {
+					$('.rate-star').removeClass('active');
+
+					var index = $(this).parent().index();
+
+					$('.rate-star').each(function (i) {
+						if (i <= index) {
+							$(this).addClass('active');
+						}
+					});
+
+					if ($('.rate-star.active').length > 0) {
+            $('.ask__more-info').removeClass('none');
+						$('.ask__more-info').show();
+					} else {
+						$('.ask__more-info').hide();
+					}
+				});
+			});
+		</script>
+	</body>
+</html>

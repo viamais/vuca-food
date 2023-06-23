@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:og="http://ogp.me/ns#"
+  xmlns:fb="http://www.facebook.com/2008/fbml"
+>
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Titulo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="WLIB Soluções Web - www.wlib.com.br" />
+
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:image:width" content="1300" />
+    <meta property="og:image:height" content="700" />
+    <meta property="og:site_name" content="TITULO" />
+    <meta property="fb:admins" content="1066108721" />
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/apps.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script defer type="text/javascript" src="js/jquery.slick.js"></script>
+    <script defer type="text/javascript" src="js/jquery.fancybox.js"></script>
+    <script defer type="text/javascript" src="js/jquery.inputmask.js"></script>
+    <script type="text/javascript" src="js/jquery.sweetalert.js"></script>
+    <script type="text/javascript" src="js/jquery.validacao.js"></script>
+    <script type="text/javascript" src="js/jquery.funcoes.js"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"
+    ></script>
+  </head>
+
+  <body>
+    <div class="wrapper profile">
+      <header class="header-main back only-title">
+        <a href=""
+          ><iconify-icon
+            class="baseline-chevron-left left-icon icon"
+            icon="ic:baseline-chevron-left"
+          ></iconify-icon
+        ></a>
+
+        <div class="header__title">
+          <span> Complementos de endereço </span>
+        </div>
+        <div class="header__nav" id="btn-menu">
+          <iconify-icon
+            class="right-icon icon baseline-more-vert"
+            icon="ic:baseline-more-vert"
+          ></iconify-icon>
+        </div>
+      </header>
+
+      <section class="s-address-complement">
+        <div class="container">
+          <section class="s-address-complement overflow-auto">
+            <div class="s-address-complement__header">
+              <div class="container">
+                <h2>Rua T-51, 681</h2>
+
+                <p>Setor Bueno, Goiânia-GO</p>
+              </div>
+            </div>
+          </section>
+          <form class="flex-y-24" action="">
+            <div class="input text personal-data">
+              <input
+                type="text"
+                name="address-number"
+                id="address-number"
+                placeholder="Número"
+              />
+            </div>
+
+            <div class="input text personal-data">
+              <input
+                type="text"
+                name="address-complement"
+                id="address-complement"
+                placeholder="Complemento"
+              />
+            </div>
+
+            <div class="input text personal-data">
+              <input
+                type="text"
+                name="landmark"
+                id="landmark"
+                placeholder="Ponto de referência"
+              />
+            </div>
+
+            <a href="#" class="btn btn-primary">Salvar</a>
+          </form>
+        </div>
+      </section>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        $("#btn-menu, #close-main-modal").click(function (event) {
+          event.preventDefault(); // Impede o comportamento padrão do link
+          $("#menu-modal").toggleClass("active");
+        });
+      });
+    </script>
+  </body>
+</html>

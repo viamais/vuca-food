@@ -174,6 +174,10 @@ body {
 /* Início dos estilos de classes utilitárias
  */
 
+.w-100 {
+	width: 100% !important;
+}
+
 .margin-bottom-20 {
 	margin-bottom: 2rem;
 }
@@ -187,18 +191,48 @@ body {
 	background-color: var(--gray5);
 }
 
+.input-row {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 2.4rem;
+}
+
 .flex-y-24 {
 	display: flex;
 	flex-direction: column;
 	gap: 2.4rem;
 }
 
+.flex-y-16 {
+	display: flex;
+	flex-direction: column;
+	gap: 1.6rem;
+}
+
+.mt-24 {
+	margin-top: 2.4rem;
+}
+
 .overflow-auto {
 	overflow: auto !important;
 }
 
+.center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.vh100 {
+	height: 100vh;
+}
+
 .none {
-	display: none;
+	display: none !important;
+}
+
+.bg-black {
+	background: var(--gray5) !important;
 }
 
 /* Fim dos estilos de classes utilitárias
@@ -240,6 +274,11 @@ body {
 	width: 100%;
 }
 
+.btn.btn-primary.rounded {
+	border-radius: 2.3rem;
+	max-width: max-content;
+}
+
 .btn.btn-ghost {
 	background-color: transparent;
 	font-weight: 400;
@@ -258,11 +297,20 @@ body {
 	color: var(--gray0);
 }
 
+.btn.btn-filled-gray {
+	background-color: var(--gray0);
+	font-weight: 700;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1.2rem 2.4rem;
+	border-radius: 0.6rem;
+	width: 100%;
+}
+
 /*Fim dos estilos globais de botões*/
 
 /* Início dos estilos de tags */
-
-/* Fim dos estilos de tags */
 
 .orders-tag {
 	border-radius: 6px;
@@ -318,7 +366,108 @@ body {
 	font-weight: 700;
 }
 
+/* Fim dos estilos de tags */
+
+/* Início dos estilos de componentes de modal */
+
+.modal-more-options {
+	padding: 0 1rem 0 1rem;
+	position: fixed;
+	bottom: 0;
+
+	left: 0;
+	width: 100%;
+	transform: translateY(-50%);
+	opacity: 0;
+	transition: all 0.2s ease-in;
+}
+
+.modal-more-options.active {
+	transform: translateY(0);
+	opacity: 1;
+}
+
+.modal-more-options .container {
+	border-radius: 1.2rem 1.2rem 0 0;
+	box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.5);
+	background-color: var(--gray3);
+	padding: 2rem 2.4rem 3.5rem 2.4rem !important;
+	display: flex;
+	gap: 1.8rem;
+	flex-direction: column;
+}
+
+.modal-more-options .modal-more-options__header {
+	font-size: 1.8rem;
+	font-weight: 400;
+}
+
+.modal-more-options .modal-more-options__content {
+	display: flex;
+	gap: 1.6rem;
+}
+
+/* Fim dos estilos de componentes de modal */
+
 /* Início dos estilos de inputs */
+
+/* Define a custom checkbox */
+input[type='checkbox'] {
+	display: none;
+	height: 0;
+	width: 0;
+	opacity: 0;
+}
+
+/* Define the visible checkbox element */
+input[type='checkbox'] + label {
+	cursor: pointer;
+	position: relative;
+	padding-left: 25px;
+}
+
+/* Define the visible checkbox box when not checked */
+input[type='checkbox'] + label:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 18px;
+	height: 18px;
+	border: 1px solid #616161;
+	border-radius: 50%; /* makes the checkbox round */
+	background-color: black;
+}
+
+/* Define the visible checkbox box when checked */
+input[type='checkbox']:checked + label:before {
+	border: 1px solid #fd0d00;
+	background-color: #fd0d00;
+}
+
+/* Define the checkmark of the checkbox */
+input[type='checkbox']:checked + label:after {
+	content: '';
+	position: absolute;
+	left: 7px;
+	top: 3px;
+	width: 5px;
+	height: 10px;
+	border: solid black;
+	border-width: 0 2px 2px 0;
+	transform: rotate(45deg);
+}
+
+/* Hides the checkmark when the checkbox is not checked */
+input[type='checkbox']:not(:checked) + label:after {
+	opacity: 0;
+	transform: rotate(-45deg);
+}
+
+.group-checkbox {
+	height: 1.8rem !important;
+	width: 1.8rem;
+}
 
 .input.text {
 	display: flex;
@@ -334,6 +483,7 @@ body {
 	font-size: 1.8rem;
 	color: #fff;
 	font-weight: 400;
+	width: 100%;
 }
 
 .input.text .icon {
@@ -436,6 +586,27 @@ body {
 	font-style: normal;
 	text-align: center;
 	width: 30%;
+}
+
+.input-search {
+	padding: 0.8rem 1.2rem;
+	background-color: var(--gray3);
+	border-radius: 2rem;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	gap: 0.8rem;
+}
+
+.input-search input {
+	width: 100%;
+	color: #fff;
+}
+
+.input-search .icon.baseline-search {
+	font-size: 2.4rem;
+	color: var(--gray0);
+	opacity: 0.4;
 }
 
 /* Fim dos estilos de inputs */
@@ -1884,4 +2055,401 @@ header {
 	display: flex;
 	flex-direction: column;
 	gap: 1.2rem;
+}
+
+/* Fim dos estilos da página de lista de pedidos*/
+
+/* Início dos estilos da página de avaliação de pedido*/
+
+.s-review .s-review__order {
+	opacity: 1;
+	background-image: linear-gradient(
+		180deg,
+		rgba(0, 0, 0, 1) 0%,
+		rgba(74, 74, 74, 1) 100%
+	);
+}
+
+.s-review .s-review__order .container {
+	height: 11.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.s-review .s-review__order .container p {
+	color: #fff;
+	font-size: 1.6rem;
+	font-weight: 400;
+	text-align: center;
+}
+
+.s-review .s-review__order .container h2 {
+	color: #fff;
+	font-size: 2rem;
+	font-weight: 700;
+}
+
+.s-review .s-review__ask {
+	margin-top: 6.2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.s-review .s-review__ask .container {
+	margin-bottom: 6.2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.s-review .s-review__ask .ask__illustration {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 1.6rem;
+}
+
+.s-review .s-review__ask .ask__illustration .ask__title {
+	color: #fff;
+	font-size: 1.9rem;
+	font-weight: 700;
+}
+
+.s-review .s-review__ask .ask__stars {
+	display: flex;
+}
+
+.s-review .s-review__ask .ask__stars .rate-star {
+	font-size: 4.8rem;
+	color: var(--gray3);
+}
+
+.s-review .s-review__ask .ask__more-info {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	gap: 0.8rem;
+}
+
+.s-review .s-review__ask .ask__more-info .rate-tag {
+	border-radius: 1.4rem;
+	border: 1px solid var(--gray2);
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	font-size: 1.5rem;
+	font-weight: 400;
+	font-style: normal;
+	padding: 0.4rem 1.5rem;
+}
+
+.s-review .s-review__ask .ask__more-info .rate-tag.active {
+	border: none;
+	background-color: #fffd03;
+	color: #000;
+}
+
+.s-review .s-review__ask .ask__stars .rate-star.active {
+	color: #fffd03;
+}
+.container-btn {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	margin-bottom: 3.4rem;
+}
+
+/* Início dos estilos da página de endereços */
+
+.s-address {
+}
+.s-address .input-search {
+	margin: 1rem 0;
+}
+
+.s-address .use-location {
+	margin: 3rem 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	gap: 1rem;
+	font-size: 1.8rem;
+	font-weight: 400;
+}
+
+.s-address .use-location .icon {
+	font-size: 2.4rem;
+}
+
+.s-address .my-adress-list {
+	display: flex;
+	flex-direction: column;
+}
+
+.my-adress-list__item {
+	border-radius: 0.8rem;
+	border: 1px solid var(--gray4);
+	height: 8.5rem;
+	display: flex;
+	align-items: center;
+	padding: 0 1.6rem;
+}
+
+.my-adress-list__item .item__group {
+	display: flex;
+	width: 100%;
+	gap: 1.6rem;
+  align-items: center;
+}
+
+.my-adress-list__item .item__address h3 {
+	color: #fff;
+	font-size: 1.6rem;
+	font-weight: 700;
+}
+
+.my-adress-list__item .item__address p {
+	color: #fff;
+	font-size: 1.4rem;
+	font-weight: 400;
+}
+
+.my-adress-list__item .item__more {
+	font-size: 3.2rem;
+	color: var(--gray0);
+	height: 3.2rem;
+	width: 3.2rem;
+}
+
+.s-address .address-search-list {
+	display: flex;
+	flex-direction: column;
+}
+
+.address-search-list .address-search-list__item {
+	display: flex;
+	gap: 0.8rem;
+	padding: 1.2rem 0;
+	align-items: center;
+}
+
+.address-search-list .address-search-list__item h3 {
+	color: #fff;
+	font-size: 1.6rem;
+	font-weight: 700;
+}
+
+.address-search-list .address-search-list__item p {
+	color: #fff;
+	font-size: 1.4rem;
+	font-weight: 400;
+}
+
+.address-search-list .address-search-list__item .icon {
+	font-size: 2.4rem;
+	color: var(--gray3);
+}
+
+/* Seção de endereço com visualização de mapa */
+
+.s-address-map .s-address-map__header {
+	background-image: linear-gradient(
+		180deg,
+		rgba(0, 0, 0, 1) 0%,
+		rgba(0, 0, 0, 0) 100%
+	);
+}
+
+.s-address-map .s-address-map__header .container {
+	height: 11.5rem;
+	display: flex;
+	align-items: center;
+
+	flex-direction: column;
+}
+
+.s-address-map .s-address-map__header .container p {
+	color: #fff;
+	font-size: 1.4rem;
+	font-weight: 400;
+	text-align: center;
+}
+
+.s-address-map .s-address-map__header h2 {
+	margin-top: 1rem;
+	color: #fff;
+	font-size: 1.6rem;
+	font-weight: 700;
+	text-align: center;
+}
+
+/* Seção de complemento de endereço */
+
+.s-address-complement .s-address-complement__header {
+	margin-top: 1.6rem;
+}
+
+.s-address-complement .btn-primary {
+	margin-top: 1.6rem;
+}
+
+.s-address-complement .s-address-complement__header {
+	margin: 1rem 0 2.4rem 0;
+}
+
+.s-address-complement .s-address-complement__header .container {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.s-address-complement .s-address-complement__header .container p {
+	color: #fff;
+	font-size: 1.4rem;
+	font-weight: 400;
+	text-align: center;
+}
+
+.s-address-map .s-address-map__header h2 {
+	color: #fff;
+	font-size: 1.6rem;
+	font-weight: 700;
+	text-align: center;
+	margin-bottom: 2.4rem;
+}
+
+/* Fim dos estilos da página de endereços */
+
+/* Início dos estilos das páginas de pagamentos */
+
+/* Seção de adicionar método de pagamento (vazio) */
+
+.s-payment-add .s-payment-add__cta {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+
+.s-payment-add .s-payment-add__cta .cta__illustration {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	margin-top: -12rem;
+	gap: 4rem;
+}
+
+/* Seção de adicionar método de pagamento (lista de cartões) */
+
+.payment-methods__item {
+	border-radius: 0.8rem;
+	border: 1px solid var(--gray4);
+	height: 6.8rem;
+	display: flex;
+	align-items: center;
+	padding: 0 1.6rem;
+	gap: 0.8rem;
+}
+
+.payment-methods__item .item__warning {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	font-size: 1.4rem;
+	font-weight: 700;
+	font-style: normal;
+	letter-spacing: 0px;
+	text-align: center;
+	border-radius: 0.6rem;
+	background-color: var(--color-primary);
+	padding: 0.4rem 0.8rem;
+	flex-shrink: 0;
+}
+
+.payment-methods__item .item__more {
+	height: 3.2rem;
+	width: 3.2rem;
+}
+
+.payment-methods__item .item__group {
+	display: flex;
+	width: 100%;
+	gap: 1.6rem;
+	align-items: center;
+}
+
+.payment-methods__item .item__group .icon__container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #fff;
+	border-radius: 0.4rem;
+	padding: 0.8rem;
+	height: 2.7rem;
+	min-width: 4.8rem;
+}
+
+.payment-methods__item .item__group .icon__container .icon {
+	font-size: 1rem;
+}
+
+.payment-methods__item .item__info h3 {
+	color: #fff;
+	font-size: 1.6rem;
+	font-weight: 700;
+}
+
+.payment-methods__item .item__info p {
+	color: #fff;
+	font-size: 1.4rem;
+	font-weight: 400;
+}
+
+.payment-methods__item .item__more {
+	font-size: 3.2rem;
+	color: var(--gray0);
+}
+
+/* seção de validação de cartão */
+
+.s-payment-validation .container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 3.2rem;
+}
+
+.s-payment-validation .container .input.text {
+	width: 100%;
+	max-width: 100%;
+}
+
+.s-payment-validation .container .input.text input {
+	text-align: center;
+}
+
+.s-payment-validation .container .text {
+	max-width: 80%;
+	margin: 0 auto;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1.6rem;
+
+	.bold {
+		font-weight: 700 !important;
+	}
 }

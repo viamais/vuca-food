@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:og="http://ogp.me/ns#"
+	xmlns:fb="http://www.facebook.com/2008/fbml"
+>
+	<head>
+		<meta charset="utf-8" />
+
+		<title>Titulo</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, maximum-scale=1"
+		/>
+		<meta name="description" content="" />
+		<meta name="author" content="WLIB Soluções Web - www.wlib.com.br" />
+
+		<meta property="og:title" content="" />
+		<meta property="og:description" content="" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="" />
+		<meta property="og:image" content="" />
+		<meta property="og:image:width" content="1300" />
+		<meta property="og:image:height" content="700" />
+		<meta property="og:site_name" content="TITULO" />
+		<meta property="fb:admins" content="1066108721" />
+
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/apps.css" />
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script defer type="text/javascript" src="js/jquery.slick.js"></script>
+		<script defer type="text/javascript" src="js/jquery.fancybox.js"></script>
+		<script defer type="text/javascript" src="js/jquery.inputmask.js"></script>
+		<script type="text/javascript" src="js/jquery.sweetalert.js"></script>
+		<script type="text/javascript" src="js/jquery.validacao.js"></script>
+		<script type="text/javascript" src="js/jquery.funcoes.js"></script>
+		<script
+			defer
+			src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"
+		></script>
+	</head>
+
+	<body>
+		<div class="wrapper bg-black">
+			<header class="header-main back only-title bg-black">
+				<a href=""
+					><iconify-icon
+						class="baseline-chevron-left left-icon icon"
+						icon="ic:baseline-chevron-left"
+					></iconify-icon
+				></a>
+
+				<div class="header__title">
+					<span> Endereços </span>
+				</div>
+				<div class="header__nav" id="btn-menu">
+					<iconify-icon
+						class="right-icon baseline-more-vert"
+						icon="ic:baseline-more-vert"
+					></iconify-icon>
+				</div>
+			</header>
+
+			<section class="s-address container">
+				<div class="input-search">
+					<iconify-icon
+						class="icon baseline-search"
+						icon="ic:baseline-search"
+					></iconify-icon>
+					<input
+						type="search"
+						name="search"
+						id="search"
+						placeholder="Buscar novo endereço"
+						value=""
+					/>
+				</div>
+
+				<button type="button" class="use-location container">
+					<iconify-icon
+						class="icon baseline-my-location"
+						icon="ic:baseline-my-location"
+					></iconify-icon>
+					Usar minha localização atual
+				</button>
+
+				<ul class="my-address-list container flex-y-16">
+					<li class="my-adress-list__item" id="1">
+						<div class="item__group">
+							<div class="group-checkbox">
+								<input type="checkbox" id="checkbox1" />
+								<label for="checkbox1"></label>
+							</div>
+
+							<div class="item__address">
+								<h3>Rua T-51, 681</h3>
+								<p>Apto 1803 - Esquina com Avenida T-2</p>
+								<p>Setor Bueno, Goiânia-GO</p>
+							</div>
+						</div>
+
+						<button type="button" class="item__more" id="item__more">
+							<iconify-icon
+								class="icon baseline-more-vert"
+								icon="ic:baseline-more-vert"
+							></iconify-icon>
+						</button>
+					</li>
+					<li class="my-adress-list__item" id="2">
+						<div class="item__group">
+							<div class="group-checkbox">
+								<input type="checkbox" id="checkbox2" />
+								<label for="checkbox2"></label>
+							</div>
+							<div class="item__address">
+								<h3>Rua T-51, 681</h3>
+								<p>Apto 1803 - Esquina com Avenida T-2</p>
+								<p>Setor Bueno, Goiânia-GO</p>
+							</div>
+						</div>
+
+						<button type="button" class="item__more" id="item__more">
+							<iconify-icon
+								class="icon baseline-more-vert"
+								icon="ic:baseline-more-vert"
+							></iconify-icon>
+						</button>
+					</li>
+				</ul>
+
+				<ul class="address-search-list container">
+					<li class="address-search-list__item">
+						<iconify-icon
+							class="icon round-location-on"
+							icon="ic:round-location-on"
+						></iconify-icon>
+						<div class="item__text">
+							<h3>Rua T-51, 681</h3>
+							<p>Setor Bueno, Goiânia-GO</p>
+						</div>
+					</li>
+					<li><div class="divider"></div></li>
+				</ul>
+			</section>
+
+			<div class="modal-more-options active">
+				<div class="container">
+					<div class="modal-more-options__header">O que deseja fazer?</div>
+					<div class="modal-more-options__content">
+						<a href="" class="btn btn-primary">Editar</a>
+						<a href="" class="btn btn-filled-gray">Excluir</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			$(document).ready(function () {
+				$('.address-search-list').hide();
+				$('#search').on('keyup', function () {
+					if ($(this).val().length > 0) {
+						$('.my-address-list').hide();
+            $('.address-search-list').show();
+					} else {
+						$('.my-address-list').show();
+            $('.address-search-list').hide();
+					}
+				});
+			});
+		</script>
+	</body>
+</html>
